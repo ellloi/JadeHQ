@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>jadeHQ — Scratch-like Game Template</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Blockly CDN -->
+  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <!-- Blockly JavaScript generator -->
+  <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+</head>
+<body>
+  <header>
+    <h1>jadeHQ</h1>
+    <div class="controls">
+      <button id="greenFlag" title="Run">🟢 Run</button>
+      <button id="stop" title="Stop">⛔ Stop</button>
+      <button id="save" title="Save Workspace">💾 Save</button>
+      <button id="load" title="Load Workspace">📂 Load</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="workspace-area">
+      <div id="toolbox" style="display: none">
+        <!-- XML toolbox will be injected by blocks.js -->
+      </div>
+      <div id="blocklyDiv"></div>
+    </section>
+
+    <section id="stage-area">
+      <canvas id="stage" width="480" height="360"></canvas>
+      <div id="sprites-panel">
+        <h3>Sprites</h3>
+        <ul id="spriteList"></ul>
+        <button id="addSprite">+ Add Sprite</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>jadeHQ — Template uses Blockly. This is not Scratch and uses a different runtime.</small>
+  </footer>
+
+  <script src="blocks.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
