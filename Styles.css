@@ -1,0 +1,22 @@
+/* Minimal styles for new UI */
+.modal {
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display:flex; align-items:center; justify-content:center;
+  z-index: 9999;
+}
+.modal-content {
+  background:#fff; padding:16px; border-radius:8px; width:360px; max-width:92%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.close-modal { cursor:pointer; float:right; font-size:20px; }
+.genres-container { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.genre-chip {
+  padding:6px 10px; border-radius:16px; background:#f4f6fb; border:1px solid #e6eef9;
+  cursor:pointer; user-select:none;
+}
+.genre-chip.selected { background:#0d99ff; color:white; border-color:#0d99ff; }
+.form-error { font-size:13px; color:#b00020; }
+.search-results { margin-top:12px; }
+.search-results .game-card { border:1px solid #e8eef8; padding:8px; border-radius:8px; margin-bottom:8px; background:#fff; }
