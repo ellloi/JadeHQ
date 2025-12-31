@@ -1,0 +1,43 @@
+<!-- Add these elements somewhere in your page (e.g., next to the sprites panel). -->
+<!-- Post Game button and modal -->
+<button id="postGameBtn">+ Post Game</button>
+
+<div id="postGameModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-modal" id="closePostModal">&times;</span>
+    <h2>Post a Game</h2>
+    <form id="postGameForm">
+      <label>
+        Title
+        <input type="text" id="gameTitle" required />
+      </label>
+      <label>
+        Description
+        <textarea id="gameDescription"></textarea>
+      </label>
+
+      <div>
+        <label>Genres (select at least 2)</label>
+        <div id="genresContainer" class="genres-container"></div>
+        <div id="genresError" class="form-error" style="display:none;color:#b00020;margin-top:6px;">
+          Please select at least two genres.
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <button type="submit">Post Game</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Search by genres -->
+<section id="gameSearch">
+  <h3>Find games by genres</h3>
+  <div id="searchGenresContainer" class="genres-container"></div>
+  <label><input type="radio" name="genreMode" value="AND" checked /> Match all (AND)</label>
+  <label><input type="radio" name="genreMode" value="OR" /> Match any (OR)</label>
+  <button id="searchBtn">Search</button>
+
+  <div id="searchResults" class="search-results"></div>
+</section>
